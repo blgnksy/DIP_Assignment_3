@@ -14,13 +14,8 @@
 %>[ output1 output2 ] = comment_style(param1,param2);
 %>
 %====================================================================
-function  [img_corr, img_corr_thresholded]  = question_1(img,img_template)
-img=im2double(img);
-img_template=im2double(img_template);
+function [ output1 output2 ] = question_2_a(param1,param2)
 
-c=imfilter(img,img_template,'corr');
-img_corr=c./max(max(c));
-subplot(1,3,3), imshow(img_corr);
 
-img_corr_thresholded=imbinarize(img_corr,0.2);
+
 end
