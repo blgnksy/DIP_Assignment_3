@@ -1,0 +1,6 @@
+img_faces=imread('./inputs/faces.png');
+img_face_template=imread('./inputs/face_template.jpg');
+
+figure;
+subplot(1,2,1),imshow(img_faces);
+subplot(1,2,2),imshow(img_face_template);
