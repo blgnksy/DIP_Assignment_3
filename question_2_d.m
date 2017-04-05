@@ -11,15 +11,10 @@
 %> question_2_a(img);
 %>
 %====================================================================
-function question_2_a(img)
+function [response_h1, response_h2 ]=question_2_d(img)
 img=im2double(img);
-first_deriv=diff(img);
-second_deriv=diff(first_deriv);
-plot(img,'r');
-hold on;
-plot(first_deriv,'b');
-hold on;
-plot(second_deriv,'g');
-hold on;
-legend('Original Signal','First Derivative','Second Derivative');
+h1=[-1 0 1; -2 0 2;-1 0 1];
+h2=[-1 -2 -1;0 0 0;1 2 1];
+response_h1=imfilter(img,h1);
+response_h2=imfilter(img,h2);
 end

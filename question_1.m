@@ -2,16 +2,17 @@
 %> @brief You should give brief information about the function here.
 %>
 %>
-%> @author ucinar
+%> @author Bilgin Aksoy
 %>
-%> @param param1 : explanation of input1
-%> @param param2 : explanation of input2
+%> @param img : Image where template matching is implemented on.
+%> @param img_template : Template to be searched.
 %>
-%> @retval output1 : explanation of output1
-%> @retval output2 : explanation of output2
+%> @retval img_corr : Correlation response of filter
+%> @retval img_corr_thresholded : Thresholded version of  correlation
+%response.
 %>
 %> @example 
-%>[ output1 output2 ] = comment_style(param1,param2);
+%>[ img_corr, img_corr_thresholded ] = question_1(img,img_template);
 %>
 %====================================================================
 function  [img_corr, img_corr_thresholded]  = question_1(img,img_template)

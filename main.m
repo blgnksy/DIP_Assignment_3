@@ -15,14 +15,28 @@
 % subplot(1,4,4),imshow(img_thresholded);
 
 %begin question_2_a.m
-img_sharpen=imread('./inputs/Assignment_3.jpg');
-img_cropped=img_sharpen(100,210:260);
-first_deriv=diff(img_cropped);
-second_deriv=diff(first_deriv);
-plot(img_cropped,'r');
-hold on;
-plot(first_deriv,'b');
-hold on;
-plot(second_deriv,'g');
-hold on;
-legend('Original Signal','First Derivative','Second Derivative');
+% img_sharpen=imread('./inputs/Assignment_3.jpg');
+% img_cropped=img_sharpen(100,210:260);
+% question_2_a(img_cropped);
+
+% %begin question_2_c.m
+% img_to_filter=imread('./inputs/synthetic.jpg');
+% [img_h1,img_h2]=question_2_c(img_to_filter);
+% imwrite(img_h1,'./outputs/synthetic_filtered_laplacian_h1.jpg','jpg');
+% imwrite(img_h2,'./outputs/synthetic_filtered_laplacian_h2.jpg','jpg');
+% figure;
+% subplot(3,1,1), imshow(img_to_filter);
+% subplot(3,1,2), imshow(img_h1);
+% subplot(3,1,3), imshow(img_h2);
+
+%begin question_2_d.m
+img_to_filter=imread('./inputs/Assignment_3.jpg');
+[img_h1,img_h2]=question_2_c(img_to_filter);
+imwrite(img_h1,'./outputs/filtered_sobel_h1.jpg','jpg');
+imwrite(img_h2,'./outputs/filtered_sobel_h2.jpg','jpg');
+figure;
+subplot(3,2,1), imshow(img_to_filter);
+subplot(3,2,3), imshow(img_h1);
+subplot(3,2,5), imshow(img_h2);
+subplot(3,2,4), imshow(img_h1(200:250,200:250));
+subplot(3,2,6), imshow(img_h2(200:250,200:250));
