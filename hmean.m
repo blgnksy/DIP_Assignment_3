@@ -12,5 +12,9 @@
 %>
 %====================================================================
 function v = hmean(A)
-v=length(A)/sum(1./A);
+v = 0;
+for i=1:length(A)
+    v = v+1/A(i);
+end
+v = length(A)/v;
 end

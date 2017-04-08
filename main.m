@@ -54,8 +54,10 @@
 % end
 
 %begin question_3_c.m
-for c=1:1:3
-    [geo_mean_filtered,harmonic_mean_filtered]=question_3_c(imread(sprintf('./outputs/noisy_%d.jpg', c)));
-    imwrite(geo_mean_filtered,sprintf('./outputs/smooth_geomean(%d).jpg', c));
-    imwrite(harmonic_mean_filtered,sprintf('./outputs/smooth_harmonic(%d).jpg', c));
-end
+% for c=1:1:3
+%     [geo_mean_filtered,harmonic_mean_filtered]=question_3_c(imread(sprintf('./outputs/noisy_%d.jpg', c)));
+%     imwrite(geo_mean_filtered,sprintf('./outputs/smooth_geomean(%d).jpg', c));
+%     imwrite(harmonic_mean_filtered,sprintf('./outputs/smooth_harmonic(%d).jpg', c));
+% end
+
+
