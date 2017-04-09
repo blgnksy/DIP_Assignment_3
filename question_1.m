@@ -21,7 +21,6 @@ img_template=im2double(img_template);
 
 score=imfilter(img,img_template,'corr');
 img_corr=score./max(max(score));
-subplot(1,3,3), imshow(img_corr);
 
-img_corr_thresholded=im2bw(img_corr,0.56);
+img_corr_thresholded=im2bw(img_corr,0.66);
 end
